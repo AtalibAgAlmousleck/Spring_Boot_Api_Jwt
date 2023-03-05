@@ -1,6 +1,5 @@
-package com.tahidjart.users_jwt.exceptions.api;
+package com.tahidjart.users_jwt.exception.api;
 
-import lombok.Data;
 import org.springframework.http.HttpStatus;
 
 import java.time.ZonedDateTime;

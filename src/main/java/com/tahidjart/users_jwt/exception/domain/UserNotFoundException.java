@@ -1,4 +1,4 @@
-package com.tahidjart.users_jwt.exceptions.domain;
+package com.tahidjart.users_jwt.exception.domain;
 
 public class UserNotFoundException extends Exception{
 

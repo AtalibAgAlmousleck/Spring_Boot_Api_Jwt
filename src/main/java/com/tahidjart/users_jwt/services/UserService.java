@@ -1,9 +1,9 @@
 package com.tahidjart.users_jwt.services;
 
 import com.tahidjart.users_jwt.domain.User;
-import com.tahidjart.users_jwt.exceptions.domain.EmailExistException;
-import com.tahidjart.users_jwt.exceptions.domain.UserNotFoundException;
-import com.tahidjart.users_jwt.exceptions.domain.UsernameExistException;
+import com.tahidjart.users_jwt.exception.domain.EmailExistException;
+import com.tahidjart.users_jwt.exception.domain.UserNotFoundException;
+import com.tahidjart.users_jwt.exception.domain.UsernameExistException;
 
 import java.util.List;
 

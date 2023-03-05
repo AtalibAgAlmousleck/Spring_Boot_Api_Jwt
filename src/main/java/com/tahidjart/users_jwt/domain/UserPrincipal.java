@@ -10,27 +10,27 @@ import java.util.stream.Collectors;
 import static java.util.Arrays.stream;
 
 public class UserPrincipal implements UserDetails {
-    private User users;
+    private User user;
 
-    public UserPrincipal(User users) {
-        this.users = users;
+    public UserPrincipal(User user) {
+        this.user = user;
     }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return stream(this.users.getAuthorities()).map(
+        return stream(this.user.getAuthorities()).map(
                 SimpleGrantedAuthority::new
         ).collect(Collectors.toList());
     }
 
     @Override
     public String getPassword() {
-        return this.users.getPassword();
+        return this.user.getPassword();
     }
 
     @Override
     public String getUsername() {
-        return this.users.getUsername();
+        return this.user.getUsername();
     }
 
     @Override
@@ -40,7 +40,7 @@ public class UserPrincipal implements UserDetails {
 
     @Override
     public boolean isAccountNonLocked() {
-        return this.users.isNotLocked();
+        return this.user.isNotLocked();
     }
 
     @Override
@@ -50,6 +50,6 @@ public class UserPrincipal implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return this.users.isActive();
+        return this.user.isActive();
     }
 }

@@ -1,4 +1,4 @@
-package com.tahidjart.users_jwt.exceptions.api;
+package com.tahidjart.users_jwt.exception.api;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

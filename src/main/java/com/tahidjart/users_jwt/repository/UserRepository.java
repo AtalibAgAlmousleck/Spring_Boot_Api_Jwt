@@ -1,4 +1,4 @@
-package com.tahidjart.users_jwt.repositories;
+package com.tahidjart.users_jwt.repository;
 
 import com.tahidjart.users_jwt.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
