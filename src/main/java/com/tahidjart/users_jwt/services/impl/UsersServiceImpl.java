@@ -50,7 +50,7 @@ public class UsersServiceImpl implements UserService, UserDetailsService {
         User user = userRepository.findUserByUsername(username);
         if (user == null) {
             log.error("User with the given details not found");
-            throw new UsernameNotFoundException(GIVEN_DETAILS_NOT_FOUND);
+            throw new UsernameNotFoundException(GIVEN_DETAILS_NOT_FOUND + username);
         } else {
            validateLoginAttempt(user);
             user.setLastLoginDisplay(user.getLastLoginDate());
@@ -62,7 +62,6 @@ public class UsersServiceImpl implements UserService, UserDetailsService {
         }
 
     }
-
     private void validateLoginAttempt(User user) {
         if(user.isNotLocked()) {
             if(loginAttemptService.hasExceededMaxAttempts(user.getUsername())) {
